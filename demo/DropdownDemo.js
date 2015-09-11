@@ -1,6 +1,5 @@
-import '../style/kuma/src/less/kuma.less';
 import React from 'react';
-import {Dropdown, Menu} from '../index';
+import {Dropdown, Menu} from '../src/index';
 
 var menu1 = <Menu>
   <Menu.Item>
@@ -35,23 +34,27 @@ var menu3 = <Menu>
   <Menu.Item key="3" disabled>第三个菜单项（不可用）</Menu.Item>
 </Menu>;
 
-React.render(
-	<div>
-		<h1>点击触发:</h1>
-		<Dropdown overlay={menu1} trigger="click">
-			<button className="kuma-button kuma-button-sblue">点击触发</button>
-		</Dropdown>
-		<h1>hover触发:</h1>
-		<Dropdown overlay={menu1}>
-			<button className="kuma-button kuma-button-sblue">hover触发</button>
-		</Dropdown>
-		<h1>触发事件:</h1>
-		<Dropdown overlay={menu2}>
-			<button className="kuma-button kuma-button-sblue">触发事件</button>
-		</Dropdown>
-		<h1>分割线和不可用菜单项:</h1>
-		<Dropdown overlay={menu3}>
-			<button className="kuma-button kuma-button-sblue">分割线和不可用菜单项</button>
-		</Dropdown>
-	</div>
-, document.getElementById('content'));
+export default class Demo extends React.Component {
+    render(){
+        return (
+            <div>
+        		<h1>点击触发:</h1>
+        		<Dropdown overlay={menu1} trigger="click">
+        			<button className="kuma-button kuma-button-sblue">点击触发</button>
+        		</Dropdown>
+        		<h1>hover触发:</h1>
+        		<Dropdown overlay={menu1}>
+        			<button className="kuma-button kuma-button-sblue">hover触发</button>
+        		</Dropdown>
+        		<h1>触发事件:</h1>
+        		<Dropdown overlay={menu2}>
+        			<button className="kuma-button kuma-button-sblue">触发事件</button>
+        		</Dropdown>
+        		<h1>分割线和不可用菜单项:</h1>
+        		<Dropdown overlay={menu3}>
+        			<button className="kuma-button kuma-button-sblue">分割线和不可用菜单项</button>
+        		</Dropdown>
+        	</div>
+        );
+    }
+}
