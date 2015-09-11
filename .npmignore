@@ -23,8 +23,8 @@ node_modules
 .cache
 example
 tests
-src
 .*
+dist
 style/*
 webpack.*.js
 loader.config.js
