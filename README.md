@@ -1,31 +1,16 @@
 # uxcore-dropdown
 ---
 
-- tags: uxcore, dropdown
-- description: uxcore dropdown
-- maintainers: vincent.bian
-- version: 0.1.0
-- lastupdate: 2015/7/12
-- screenshots:
-
 ## TL;DR
+dropdown ui component for react
 
 #### setup develop environment
 
 ```sh
-$ git clone https://github.com/uxcore/dropdown
-$ cd dropdown
+$ git clone https://github.com/uxcore/uxcore-dropdown
+$ cd uxcore-dropdown
 $ npm install
-$ npm run dev
-```
-nav http://localhost:9090/webpack-dev-server/example/ to see the demo
-
-#### deploy to gh-pages
-[refer to]( http://stackoverflow.com/questions/17643381/how-to-upload-my-angularjs-static-site-to-github-pages)
-```sh
-$ npm run build
-$ git add build & git commit -m 'update deploy files'
-$ npm run deploy
+$ gulp server
 ```
 
 ## Usage
@@ -52,7 +37,7 @@ React.render(
 ```
 
 ### demo
-http://uxcore.github.io/dropdown/
+http://uxcore.github.io/uxcore/components/dropdown/
 
 ## API
 
