@@ -5,21 +5,12 @@
  * Copyright 2014-2015, Uxcore Team, Alinw.
  * All rights reserved.
  */
-/*@pager-bg:                             @pagination-bg;
-@pager-border:                         @pagination-border;
-@pager-border-radius:                  15px;
-
-@pager-hover-bg:                       @pagination-hover-bg;
-
-@pager-active-bg:                      @pagination-active-bg;
-@pager-active-color:                   @pagination-active-color;*/
 .kuma-dropdown {
   position: absolute;
   left: -9999px;
   top: -9999px;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.5;
@@ -93,56 +84,6 @@
   overflow: hidden;
   background-color: #e5e5e5;
   line-height: 0;
-}
-.kuma-dropdown-slide-up-enter {
-  animation-duration: 0.3s;
-  animation-fill-mode: both;
-  transform-origin: 0 0;
-  display: block !important;
-  opacity: 0;
-  animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
-  animation-play-state: paused;
-}
-.kuma-dropdown-slide-up-leave {
-  animation-duration: 0.3s;
-  animation-fill-mode: both;
-  transform-origin: 0 0;
-  display: block !important;
-  opacity: 1;
-  animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.34);
-  animation-play-state: paused;
-}
-.kuma-dropdown-slide-up-enter.kuma-dropdown-slide-up-enter-active {
-  animation-name: rcDropdownSlideUpIn;
-  animation-play-state: running;
-}
-.kuma-dropdown-slide-up-leave.kuma-dropdown-slide-up-leave-active {
-  animation-name: rcDropdownSlideUpOut;
-  animation-play-state: running;
-}
-@keyframes rcDropdownSlideUpIn {
-  0% {
-    opacity: 0;
-    transform-origin: 0% 0%;
-    transform: scaleY(0);
-  }
-  100% {
-    opacity: 1;
-    transform-origin: 0% 0%;
-    transform: scaleY(1);
-  }
-}
-@keyframes rcDropdownSlideUpOut {
-  0% {
-    opacity: 1;
-    transform-origin: 0% 0%;
-    transform: scaleY(1);
-  }
-  100% {
-    opacity: 0;
-    transform-origin: 0% 0%;
-    transform: scaleY(0);
-  }
 }
 
 /*# sourceMappingURL=Dropdown.css.map */
