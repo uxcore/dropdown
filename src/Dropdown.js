@@ -12,7 +12,8 @@ class Dropdown extends RcDropdown {
 Dropdown.displayName = 'uxcore-dropdown';
 Dropdown.propTypes = RcDropdown.propTypes;
 Dropdown.defaultProps = assign(RcDropdown.defaultProps, {
-	prefixCls: 'kuma-dropdown'
+	prefixCls: 'kuma-dropdown',
+	overlayClassName: 'uxcore'
 });
 
 class Menu extends RcMenu {
