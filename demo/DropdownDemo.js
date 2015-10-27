@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import {Dropdown, Menu} from '../src/index';
 
 var menu1 = <Menu>
