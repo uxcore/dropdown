@@ -1,5 +1,6 @@
 import React from 'react';
-import {Dropdown, Menu} from '../src/index';
+import Dropdown from '../src/index';
+import Menu from 'uxcore-menu';
 
 var menu1 = <Menu>
   <Menu.Item>
@@ -39,7 +40,7 @@ export default class Demo extends React.Component {
         return (
             <div>
         		<h1>点击触发:</h1>
-        		<Dropdown overlay={menu1} trigger="click">
+        		<Dropdown overlay={menu1} trigger={["click"]}>
         			<button className="kuma-button kuma-button-sblue">点击触发</button>
         		</Dropdown>
         		<h1>hover触发:</h1>

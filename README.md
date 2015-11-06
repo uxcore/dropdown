@@ -1,7 +1,11 @@
-# uxcore-dropdown
+uxcore-dropdown
+===============
+
 ---
 
-## TL;DR
+TL;DR
+-----
+
 dropdown ui component for react
 
 #### setup develop environment
@@ -13,10 +17,12 @@ $ npm install
 $ gulp server
 ```
 
-## Usage
+Usage
+-----
 
 ```js
-import {Dropdown, Menu} from 'uxcore-dropdown';
+import Dropdown from 'uxcore-dropdown';
+import Menu from 'uxcore-menu';
 var menu = <Menu>
   <Menu.Item>
     <a target="_blank" href="http://www.alipay.com/">第一个菜单项</a>
@@ -37,13 +43,15 @@ React.render(
 ```
 
 ### demo
+
 http://uxcore.github.io/uxcore/components/dropdown/
 
-## API
+API
+---
 
 ### props
 
-|参数|说明|类型|默认值|
-|---|----|---|------|
-|trigger|触发下来行为|"click" or "hover"|hover|
-|overlay|菜单节点|React.Element|无|
+| 参数    | 说明         | 类型        | 默认值      |
+|---------|--------------|-------------|-------------|
+| trigger | 触发下来行为 | array       | `['hover']` |
+| overlay | 菜单节点     | uxcore-menu | 无          |
