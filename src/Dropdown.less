@@ -61,6 +61,13 @@
       color: #666666;
       white-space: nowrap;
 
+       > a {
+           color: @text-color;
+           &:hover, &:active {
+               text-decoration: none;
+           }
+       }
+
       &:hover, &-active, &-selected {
         background-color: #f0f0f0;
       }
