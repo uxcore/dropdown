@@ -3,6 +3,11 @@ History
 
 ---
 
+0.2.1
+-----
+
+`CHANGED` update scaffold
+
 0.2.0
 -----
 

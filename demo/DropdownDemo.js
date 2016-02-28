@@ -31,7 +31,6 @@ var menu3 = <Menu>
   <Menu.Item key="1">
     <a target="_blank" href="http://www.taobao.com/">第二个菜单项</a>
   </Menu.Item>
-  <Menu.Divider/>
   <Menu.Item key="3" disabled>第三个菜单项（不可用）</Menu.Item>
 </Menu>;
 
