@@ -3,6 +3,10 @@ History
 
 ---
 
+0.2.3
+-----
+`FIX` keep rc-dropdown version in 1.4.6 (IE8 support) 
+
 0.2.2
 -----
 
