@@ -3,6 +3,10 @@ History
 
 ---
 
+0.2.4
+-----
+`CHANGED` rc-dropdown has fixed ie8 bug, so follow lateset version again.
+
 0.2.3
 -----
 `FIX` keep rc-dropdown version in 1.4.6 (IE8 support) 

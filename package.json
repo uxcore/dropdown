@@ -1,6 +1,6 @@
 {
  "name": "uxcore-dropdown",
- "version": "0.2.3",
+ "version": "0.2.4",
  "description": "dropdown component ",
  "main": "build/index.js",
  "scripts": {
@@ -27,7 +27,7 @@
  "dependencies": {
   "classnames": "^2.1.2",
   "object-assign": "^4.0.0",
-  "rc-dropdown": "1.4.6"
+  "rc-dropdown": "~1.4.0"
  },
  "devDependencies": {
   "babel": "~6.3.26",
