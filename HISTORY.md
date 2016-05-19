@@ -3,6 +3,10 @@ History
 
 ---
 
+0.2.5
+-----
+`NEW` add inline style
+
 0.2.4
 -----
 `CHANGED` rc-dropdown has fixed ie8 bug, so follow lateset version again.

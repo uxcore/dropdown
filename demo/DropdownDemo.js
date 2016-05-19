@@ -28,6 +28,7 @@ var menu3 = <Menu>
   <Menu.Item key="0">
     <a target="_blank" href="http://www.alipay.com/">第一个菜单项</a>
   </Menu.Item>
+  <Menu.Divider />
   <Menu.Item key="1">
     <a target="_blank" href="http://www.taobao.com/">第二个菜单项</a>
   </Menu.Item>
@@ -35,25 +36,41 @@ var menu3 = <Menu>
 </Menu>;
 
 export default class Demo extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        open: false
+      };
+    }
     render(){
+        let inlineDropdownCls = 'kuma-dropdown-inline-wrap';
+        if (this.state.open) {
+          inlineDropdownCls += ' kuma-dropdown-inline-wrap-open';
+        }
         return (
-            <div>
+            <div style={{paddingLeft: 20}}>
         		<h1>点击触发:</h1>
         		<Dropdown overlay={menu1} trigger={["click"]}>
-        			<button className="kuma-button kuma-button-sblue">点击触发</button>
+        			<button className="kuma-button kuma-button-primary">点击触发</button>
         		</Dropdown>
         		<h1>hover触发:</h1>
         		<Dropdown overlay={menu1}>
-        			<button className="kuma-button kuma-button-sblue">hover触发</button>
+        			<button className="kuma-button kuma-button-primary">hover触发</button>
         		</Dropdown>
         		<h1>触发事件:</h1>
         		<Dropdown overlay={menu2}>
-        			<button className="kuma-button kuma-button-sblue">触发事件</button>
+        			<button className="kuma-button kuma-button-primary">触发事件</button>
         		</Dropdown>
         		<h1>分割线和不可用菜单项:</h1>
         		<Dropdown overlay={menu3}>
-        			<button className="kuma-button kuma-button-sblue">分割线和不可用菜单项</button>
+        			<button className="kuma-button kuma-button-primary">分割线和不可用菜单项</button>
         		</Dropdown>
+            <h1>inline</h1>
+              <Dropdown overlay={menu1} overlayClassName="kuma-dropdown-inline" onVisibleChange={function(open){this.setState({open: open})}.bind(this)}>
+                <div className={inlineDropdownCls}>
+                  <i className="kuma-icon kuma-icon-set"></i>
+                </div>
+              </Dropdown>
         	</div>
         );
     }
