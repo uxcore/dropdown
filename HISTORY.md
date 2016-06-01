@@ -3,6 +3,11 @@ History
 
 ---
 
+0.2.6
+-----
+`FIX` inline style bug in some situation
+
+
 0.2.5
 -----
 `NEW` add inline style
