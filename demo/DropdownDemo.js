@@ -62,7 +62,7 @@ export default class Demo extends React.Component {
         			<button className="kuma-button kuma-button-primary">触发事件</button>
         		</Dropdown>
         		<h1>分割线和不可用菜单项:</h1>
-        		<Dropdown overlay={menu3}>
+        		<Dropdown overlay={menu3} trigger={["click"]}>
         			<button className="kuma-button kuma-button-primary">分割线和不可用菜单项</button>
         		</Dropdown>
             <h1>inline</h1>

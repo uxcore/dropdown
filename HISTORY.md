@@ -3,10 +3,13 @@ History
 
 ---
 
+0.3.0
+-----
+`CHANGED` add animation
+
 0.2.6
 -----
 `FIX` inline style bug in some situation
-
 
 0.2.5
 -----
