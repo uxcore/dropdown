@@ -127,112 +127,100 @@
   }
 }
 
-@keyframes slideUpIn {
+@keyframes dropdownSlideInDown {
     0% {
         opacity: 0;
-        transform-origin: 0 0;
-        transform: scaleY(.8);
+        transform: translate(0, 10px);
     }
 
     100% {
         opacity: 1;
-        transform-origin: 0 0;
-        transform: scaleY(1);
+        transform: translate(0, 0);
     }
 }
 
-@keyframes slideUpOut {
+@keyframes dropdownSlideOutDown {
     0% {
         opacity: 1;
-        transform-origin: 0 0;
-        transform: scaleY(1);
+        transform: translate(0, 0);
     }
 
     100% {
         opacity: 0;
-        transform-origin: 0 0;
-        transform: scaleY(.8);
+        transform: translate(0, 10px);
     }
 }
 
-@keyframes slideDownIn {
+@keyframes dropdownSlideInUp {
     0% {
         opacity: 0;
-        transform-origin: 100% 100%;
-        transform: scaleY(.8);
+        transform: translate(0, -10px);
     }
 
     100% {
         opacity: 1;
-        transform-origin: 100% 100%;
-        transform: scaleY(1);
+        transform: translate(0, 0);
     }
 }
 
-@keyframes slideDownOut {
+@keyframes dropdownSlideOutUp {
     0% {
         opacity: 1;
-        transform-origin: 100% 100%;
-        transform: scaleY(1);
+        transform: translate(0, 0);
     }
 
     100% {
         opacity: 0;
-        transform-origin: 100% 100%;
-        transform: scaleY(.8);
+        transform: translate(0, -10px);
     }
 }
 
 .@{dropdownPrefixCls}-placement-bottomLeft {
-  &.slideUp-enter,
-  &.slideUp-appear {
+  &.dropdownSlideUp-enter,
+  &.dropdownSlideUp-appear {
     opacity: 0;
-    transform-origin: 0 0;
-    transform: scaleY(.8);
-    animation-timing-function: ease;
+    transform: translate(0, 10px);
+    animation-timing-function: ease-out;
     animation-duration: .3s;
   }
-  &.slideUp-enter-active,
-  &.slideUp-appear-active {
+  &.dropdownSlideUp-enter-active,
+  &.dropdownSlideUp-appear-active {
     visibility: visible;
-    animation-name: slideUpIn;
+    animation-name: dropdownSlideInDown;
   }
-  &.slideUp-leave {
+  &.dropdownSlideUp-leave {
     opacity: 1;
-    transform-origin: 0 0;
-    transform: scaleY(1);
-    animation-timing-function: ease;
+    transform: translate(0, 0);
+    animation-timing-function: ease-out;
     animation-duration: .3s;
   }
-  &.slideUp-leave-active {
+  &.dropdownSlideUp-leave-active {
     visibility: visible;
-    animation-name: slideUpOut;
+    animation-name: dropdownSlideOutDown;
   }
 }
 
 .@{dropdownPrefixCls}-placement-topLeft {
-  &.slideUp-enter,
-  &.slideUp-appear {
+  &.dropdownSlideUp-enter,
+  &.dropdownSlideUp-appear {
     opacity: 0;
-    transform-origin: 100% 100%;
-    transform: scaleY(.8);
-    animation-timing-function: ease;
+    transform: translate(0, -10px);
+    animation-timing-function: ease-out;
     animation-duration: .3s;
   }
-  &.slideUp-enter-active,
-  &.slideUp-appear-active {
+  &.dropdownSlideUp-enter-active,
+  &.dropdownSlideUp-appear-active {
     visibility: visible;
-    animation-name: slideDownIn;
+    animation-name: dropdownSlideInUp;
   }
-  &.slideUp-leave {
+  &.dropdownSlideUp-leave {
     opacity: 1;
-    transform-origin: 100% 100%;
-    transform: scaleY(1);
-    animation-timing-function: ease;
+    transform: translate(0, 0);
+    animation-timing-function: ease-out;
     animation-duration: .3s;
   }
-  &.slideUp-leave-active {
+  &.dropdownSlideUp-leave-active {
     visibility: visible;
-    animation-name: slideDownOut;
+    animation-name: dropdownSlideOutUp;
   }
 }

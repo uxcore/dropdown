@@ -3,6 +3,11 @@ History
 
 ---
 
+0.4.0
+----
+`CHANGED` new scaffold
+`NEW` new animation
+
 0.3.0
 -----
 `CHANGED` add animation
