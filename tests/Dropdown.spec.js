@@ -8,11 +8,11 @@ import Dropdown from '../src';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('Dropdown', () => {
-    it('trigger click event', () => {
+    it('has correct propTypes', () => {
         const menu = <div />;
         const wrapper = mount(
             <Dropdown overlay={menu}> 
-                <div>点击触发</div>
+                <div>触发</div>
             </Dropdown>
         );
         expect(wrapper.prop('prefixCls')).to.equal('kuma-dropdown');
