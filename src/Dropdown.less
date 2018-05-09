@@ -7,7 +7,6 @@
  */
 
 @dropdownPrefixCls: kuma-dropdown;
-
 .@{dropdownPrefixCls} {
   position: absolute;
   left: -9999px;
@@ -17,162 +16,188 @@
   font-size: 12px;
   font-weight: normal;
   line-height: 1.5;
-  padding-top: 3px;
-
-  &-hidden {
+  padding-top: 3px; // &-wrap {
+  //   position: relative;
+  //   .@{ant-prefix}-btn > .@{iconfont-css-prefix}-down {
+  //     .iconfont-size-under-12px(10px);
+  //   }
+  //   .@{iconfont-css-prefix}-down:before {
+  //     transition: transform .2s;
+  //   }
+  // }
+  // &-wrap-open {
+  //   .@{iconfont-css-prefix}-down:before {
+  //     transform: rotate(180deg);
+  //   }
+  // }
+  &-hidden,
+  &-menu-hidden {
     display: none;
   }
-
   &-menu {
     outline: none;
     position: relative;
     list-style-type: none;
     padding: 0;
-    margin: 2px 0 0 0;
+    margin: 0;
     text-align: left;
     background-color: #fff;
     border-radius: @global-border-radius;
-    box-shadow: 0 1px 5px @border-color;
-    border: 1px solid @border-color;
-
-    > li {
-      margin: 0;
-      padding: 0;
-    }
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: -4px;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: rgb(255, 255, 255);
-      background: rgba(255, 255, 255, 0.01);
-    }
-
-    & > &-item {
-      position: relative;
-      display: block;
+    box-shadow: @box-shadow-1;
+    background-clip: padding-box;
+    &-item-group-title {
+      color: @text-secondary-color;
       padding: 7px 10px;
+      transition: all .3s;
+    }
+    &-submenu-popup {
+      position: absolute;
+      z-index: 1070;
+    }
+    &-item,
+    &-submenu-title {
+      padding: 7px 10px;
+      margin: 0;
       clear: both;
       font-size: 12px;
       font-weight: normal;
       color: @text-secondary-color;
       white-space: nowrap;
-      transition: all .3s @transition-ease;
-       > a {
-           color: @text-primary-color;
-           &:hover, &:active {
-               text-decoration: none;
-           }
-       }
-
-      &:hover, &-active, &-selected {
+      cursor: pointer;
+      transition: all .3s;
+      line-height: 22px; // > a {
+      //   color: @text-color;
+      //   display: block;
+      //   padding: 5px @control-padding-horizontal;
+      //   margin: -5px -@control-padding-horizontal;
+      //   transition: all .3s;
+      //   &:focus {
+      //     text-decoration: none;
+      //   }
+      // }
+      &-selected,
+      &-selected>a {
+        // color: @primary-color;
         background-color: @brand-primary-lighter;
       }
-
+      &:hover {
+        background-color: @brand-primary-lighter;
+      }
       &-disabled {
         color: @text-disabled-color;
         cursor: not-allowed;
-
         &:hover {
           color: @text-disabled-color;
           background-color: #fff;
           cursor: not-allowed;
         }
       }
-
-      &:last-child {
-        border-bottom-left-radius: @global-border-radius;
-        border-bottom-right-radius: @global-border-radius;
+      &:first-child,
+      &:first-child>a {
+        border-radius: @global-border-radius @global-border-radius 0 0;
       }
-
-      &:first-child {
-        border-top-left-radius: @global-border-radius;
-        border-top-right-radius: @global-border-radius;
+      &:last-child,
+      &:last-child>a {
+        border-radius: 0 0 @global-border-radius @global-border-radius;
       }
-
+      &:only-child,
+      &:only-child>a {
+        border-radius: @global-border-radius;
+      }
       &-divider {
         height: 1px;
-        margin: 1px 0;
         overflow: hidden;
-        background-color: @border-color;
+        background-color: @split-line-color;
         line-height: 0;
       }
-    }
-  }
-  
-  &-inline {
-    &-wrap {
-      position: relative;
-      
-      display: inline-block;
-      padding: 8px 15px;
-      background-color: #fff;
-      &-open {
-        border: 1px solid @border-color;
-        border-bottom: 1px solid #fff;
+      .@{dropdownPrefixCls}-menu-submenu-arrow {
+        position: absolute; // right: @padding-xs;
+        right: 10px;
+        &:after {
+          font-family: uxcore !important;
+          font-size: 16px;
+          font-style: normal;
+          content: "\e65b";
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
       }
     }
-    &-wrap-open {
-      z-index: 1071;
+    &-submenu-title {
+      padding-right: 26px;
+      &:first-child,
+      &:last-child {
+        border-radius: 0;
+      }
     }
-    
-    .@{dropdownPrefixCls}-menu {
-      margin-top: -8px;
-      box-shadow: none;
-      border-radius: 0;
+    &-submenu-vertical {
+      position: relative;
+    }
+    &-submenu-vertical>& {
+      top: 0;
+      left: 100%;
+      position: absolute;
+      min-width: 100%;
+      margin-left: 4px;
+      transform-origin: 0 0;
+    }
+    &-submenu&-submenu-disabled .@{dropdownPrefixCls}-menu-submenu-title {
+      &,
+      .@{dropdownPrefixCls}-menu-submenu-arrow:after {
+        color: @text-disabled-color;
+      }
+    }
+    &-submenu:first-child &-submenu-title {
+      border-radius: @global-border-radius @global-border-radius 0 0;
+    }
+    &-submenu:last-child &-submenu-title {
+      border-radius: 0 0 @global-border-radius @global-border-radius;
     }
   }
 }
 
 @keyframes dropdownSlideInDown {
-    0% {
-        opacity: 0;
-        transform: translate(0, 10px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0, 0);
-    }
+  0% {
+    opacity: 0;
+    transform: translate(0, 10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
 @keyframes dropdownSlideOutDown {
-    0% {
-        opacity: 1;
-        transform: translate(0, 0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translate(0, 10px);
-    }
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 10px);
+  }
 }
 
 @keyframes dropdownSlideInUp {
-    0% {
-        opacity: 0;
-        transform: translate(0, -10px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0, 0);
-    }
+  0% {
+    opacity: 0;
+    transform: translate(0, -10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
 @keyframes dropdownSlideOutUp {
-    0% {
-        opacity: 1;
-        transform: translate(0, 0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translate(0, -10px);
-    }
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, -10px);
+  }
 }
 
 .@{dropdownPrefixCls}-placement-bottomLeft {

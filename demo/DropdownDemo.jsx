@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from 'uxcore-menu';
+import Menu, { SubMenu } from 'uxcore-menu';
 import Dropdown from '../src/index';
 
 const menu1 = (<Menu>
@@ -35,6 +35,21 @@ const menu3 = (<Menu>
   <Menu.Item key="3" disabled>第三个菜单项（不可用）</Menu.Item>
 </Menu>);
 
+const cascadeMenu = (
+  <Menu mode="vertical">
+    <Menu.Item>1st menu item</Menu.Item>
+    <Menu.Item>2nd menu item</Menu.Item>
+    <SubMenu title="sub menu">
+      <Menu.Item>3rd menu item</Menu.Item>
+      <Menu.Item>4th menu item</Menu.Item>
+    </SubMenu>
+    <SubMenu title="disabled sub menu" disabled>
+      <Menu.Item>5d menu item</Menu.Item>
+      <Menu.Item>6th menu item</Menu.Item>
+    </SubMenu>
+  </Menu>
+);
+
 export default class Demo extends React.Component {
   constructor(props) {
     super(props);
@@ -64,6 +79,10 @@ export default class Demo extends React.Component {
         <h1>分割线和不可用菜单项:</h1>
         <Dropdown overlay={menu3} trigger={['click']}>
           <button className="kuma-button kuma-button-primary">分割线和不可用菜单项</button>
+        </Dropdown>
+        <h1>级联菜单:</h1>
+        <Dropdown overlay={cascadeMenu} trigger={['click']}>
+          <button className="kuma-button kuma-button-primary">级联菜单</button>
         </Dropdown>
         <h1>inline</h1>
         <Dropdown

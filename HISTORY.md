@@ -3,6 +3,13 @@ History
 
 ---
 
+
+0.4.1
+----
+
+`CHANGED` new style, support dropdown submenu
+
+
 0.4.0
 ----
 `CHANGED` new scaffold
