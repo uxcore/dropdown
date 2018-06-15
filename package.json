@@ -16,7 +16,8 @@
   "chrome": "uxcore-tools run chrome",
   "browsers": "uxcore-tools run browsers",
   "saucelabs": "uxcore-tools run saucelabs",
-  "update": "uxcore-tools run update"
+  "update": "uxcore-tools run update",
+  "tnpm-update": "uxcore-tools run tnpm-update"
  },
  "repository": {
   "type": "git",
@@ -49,7 +50,7 @@
   "react-dom": "16.x",
   "uxcore-kuma": "*",
   "uxcore-menu": "3.x",
-  "uxcore-tools": "0.2.x",
+  "uxcore-tools": "^0.3.0",
   "babel-polyfill": "6.x",
   "react-test-renderer": "16.x",
   "enzyme-adapter-react-16": "1.x"
