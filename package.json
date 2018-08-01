@@ -1,6 +1,6 @@
 {
   "name": "uxcore-dropdown",
-  "version": "0.4.4",
+  "version": "0.5.1",
   "description": "dropdown component ",
   "main": "build/index.js",
   "scripts": {
@@ -16,7 +16,8 @@
     "chrome": "uxcore-tools run chrome",
     "browsers": "uxcore-tools run browsers",
     "saucelabs": "uxcore-tools run saucelabs",
-    "update": "uxcore-tools run update"
+    "update": "uxcore-tools run update",
+    "tnpm-update": "uxcore-tools run tnpm-update"
   },
   "repository": {
     "type": "git",
@@ -37,20 +38,21 @@
   "dependencies": {
     "classnames": "^2.1.2",
     "object-assign": "^4.0.0",
-    "rc-dropdown": "~1.4.0"
+    "rc-dropdown": "~2.2.0"
   },
   "devDependencies": {
     "console-polyfill": "^0.2.2",
     "enzyme": "^3.0.0",
     "enzyme-adapter-react-14": "^1.0.0",
-    "es5-shim": "^4.5.8",
     "expect.js": "~0.3.1",
     "kuma-base": "1.x",
-    "react": "0.14.x",
-    "react-addons-test-utils": "0.14.x",
-    "react-dom": "0.14.x",
+    "react": "16.x",
+    "react-dom": "16.x",
     "uxcore-kuma": "*",
     "uxcore-menu": "3.x",
-    "uxcore-tools": "0.2.x"
+    "uxcore-tools": "^0.3.0",
+    "babel-polyfill": "6.x",
+    "react-test-renderer": "16.x",
+    "enzyme-adapter-react-16": "1.x"
   }
 }

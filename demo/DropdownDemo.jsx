@@ -147,7 +147,7 @@ export default class Demo extends React.Component {
         </h1>
         <Dropdown
           overlay={menu1}
-          trigger="click"
+          trigger={['click']}
           overlayClassName="kuma-dropdown-inline"
           transitionName=""
           align={{
