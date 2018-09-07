@@ -1,6 +1,6 @@
 {
   "name": "uxcore-dropdown",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "dropdown component ",
   "main": "build/index.js",
   "scripts": {

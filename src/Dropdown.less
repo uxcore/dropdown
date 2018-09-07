@@ -6,8 +6,8 @@
  * All rights reserved.
  */
 
-@dropdownPrefixCls: kuma-dropdown;
-.@{dropdownPrefixCls} {
+@__dropdownPrefixCls: kuma-dropdown;
+.@{__dropdownPrefixCls} {
   position: absolute;
   left: -9999px;
   top: -9999px;
@@ -110,7 +110,7 @@
         background-color: @split-line-color;
         line-height: 0;
       }
-      .@{dropdownPrefixCls}-menu-submenu-arrow {
+      .@{__dropdownPrefixCls}-menu-submenu-arrow {
         position: absolute; // right: @padding-xs;
         right: 10px;
         &:after {
@@ -141,9 +141,9 @@
       margin-left: 4px;
       transform-origin: 0 0;
     }
-    &-submenu&-submenu-disabled .@{dropdownPrefixCls}-menu-submenu-title {
+    &-submenu&-submenu-disabled .@{__dropdownPrefixCls}-menu-submenu-title {
       &,
-      .@{dropdownPrefixCls}-menu-submenu-arrow:after {
+      .@{__dropdownPrefixCls}-menu-submenu-arrow:after {
         color: @text-disabled-color;
       }
     }
@@ -200,7 +200,7 @@
   }
 }
 
-.@{dropdownPrefixCls}-placement-bottomLeft {
+.@{__dropdownPrefixCls}-placement-bottomLeft {
   &.dropdownSlideUp-enter,
   &.dropdownSlideUp-appear {
     opacity: 0;
@@ -225,7 +225,7 @@
   }
 }
 
-.@{dropdownPrefixCls}-placement-topLeft {
+.@{__dropdownPrefixCls}-placement-topLeft {
   &.dropdownSlideUp-enter,
   &.dropdownSlideUp-appear {
     opacity: 0;
